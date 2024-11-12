@@ -7,5 +7,5 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: '/v-pal2/',
+  base: '/v-pal-2/',
 });
