@@ -1,0 +1,12 @@
+.alert {
+  padding: 17px 29px 15px 24px;
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24.28px;
+}
+
+.error {
+  color: var(--bg-red-400);
+  background-color: var(--bg-red-100);
+}

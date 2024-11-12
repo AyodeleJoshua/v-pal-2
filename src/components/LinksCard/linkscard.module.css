@@ -1,0 +1,18 @@
+.card_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.card_body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

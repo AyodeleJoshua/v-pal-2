@@ -1,0 +1,21 @@
+.card_group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.home_container {
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .home_container {
+    padding: 24px;
+  }
+
+  .card_group {
+    flex-direction: row;
+    gap: unset;
+    justify-content: space-between;
+  }
+}

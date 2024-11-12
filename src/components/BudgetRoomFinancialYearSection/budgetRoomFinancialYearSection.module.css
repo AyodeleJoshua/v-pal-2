@@ -1,0 +1,46 @@
+.filterContainer {
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--bg-grey-300);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.datepickers {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.informationSection {
+  padding: 14px 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sectionCard {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.twoColumn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column {
+  width: 45%;
+}
+
+.space {
+  height: 118px;
+}

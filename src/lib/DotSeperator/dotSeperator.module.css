@@ -1,0 +1,15 @@
+.seperator {
+  display: block;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.normal {
+  width: 8px;
+  height: 8px;
+}
+
+.small {
+  width: 3.73px;
+  height: 3.73px;
+}

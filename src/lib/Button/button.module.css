@@ -1,0 +1,30 @@
+.button {
+  border-radius: 12px;
+  padding: 15px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s all;
+  width: 100%;
+}
+
+.primary_button {
+  background-color: var(--bg-green-400);
+  color: var(--bg-green-100);
+}
+
+.ghost_button {
+  border: 1px solid var(--bg-grey-400);
+  background-color: white;
+}
+
+.ghost_button:hover {
+  background-color: var(--bg-grey-300);
+}
+
+.center {
+  justify-content: center;
+}

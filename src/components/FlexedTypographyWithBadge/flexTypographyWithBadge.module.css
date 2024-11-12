@@ -1,0 +1,25 @@
+.card_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.field {
+  background-color: var(--bg-grey-200);
+  padding: 19px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 12px;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.currencyDisplay {
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  gap: 8px;
+}
