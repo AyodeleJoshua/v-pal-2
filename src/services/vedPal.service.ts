@@ -1,5 +1,5 @@
 import getRequest from '../api/apiMethod';
 
-const getAllData = <T>(): Promise<T> => getRequest();
+const getAllData = (): Promise<void> => getRequest();
 
 export default getAllData;
