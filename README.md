@@ -1,50 +1,164 @@
-# React + TypeScript + Vite
+# V-Pal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple web app that displays dashboard based on specified design
 
-Currently, two official plugins are available:
+# Prerequisiite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- node (version 22)
+- npm or yarn
 
-## Expanding the ESLint configuration
+# Developers Experience Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Eslint to manage code quality and consistence
+- Typescript to provide type safety
 
-- Configure the top-level `parserOptions` property like this:
+# Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone the Repository:
+   Clone the repository to your local machine.
+
+git clone https://github.com/AyodeleJoshua/v-pal-2.git
+cd v-pal-2
+
+2. Install Dependencies:
+   Navigate to the project directory and install dependencies.
+   `npm install`
+
+3. Environment Variables:
+   Add .env file to root of the project
+
+4. Run the Application Locally:
+   To start the development server, use the following command:
+   `npm run dev`
+
+The application should start up on http://localhost:3000/crypto-coin/
+
+5. Build the Application for Production:
+   To create an optimized production build, use the following command:
+   `npm run build`
+
+# Files and Folders Organization
+
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+v-pal-2/
+├── src/                       
+|   ├── api\                   
+|   |   └── apiCallMethods.ts
+|   ├── assets\                    # assets for app
+|   |   ├── icons\
+|   |   |   ├── account_tree.svg
+|   |   |   ├── add.svg
+|   |   |   ├── bank.svg
+|   |   |   ├── building.svg
+|   |   |   ├── calendar.svg
+|   |   |   ├── chat.svg
+|   |   |   ├── communities.svg
+|   |   |   ├── contract_edit_primary.svg
+|   |   |   ├── contract_edit.svg
+|   |   |   ├── globe.svg
+|   |   |   ├── grid_view.svg
+|   |   |   ├── mail.svg
+|   |   |   ├── monitoring.svg
+|   |   |   ├── nigeria-flag.svg
+|   |   |   ├── notification.svg
+|   |   |   ├── upgrade.svg
+|   |   |   ├── usa-flag.svg
+|   |   |   └── visit-globe.svg
+|   |   └── images\ 
+|   |   |   ├── avatar.png
+|   |   |   ├── boy-pink-dropdown.png
+|   |   |   ├── boy-with-var.png
+|   |   |   └── vendpal-logo.png
+|   |   └── react.svg
+│   ├── components\
+|   |   ├── BudgetRoomFinancialYearSection\ 
+|   |   |   ├── budgetRoomFinancialYearSection.module.css 
+|   |   |   └── index.tsx
+|   |   ├── DashboardHomeCard\ 
+|   |   |   ├── dashboardHomeCard.module.css 
+|   |   |   └── index.tsx 
+|   |   ├── DashboardLayout\
+|   |   |   ├── dashboadLayoutTabList.ts
+|   |   |   ├── DashboardLayout.module.css 
+|   |   |   ├── Footer.tsx
+|   |   |   ├── index.tsx
+|   |   |   └── Navigation.tsx   
+|   |   ├── FlexedTypographyWithBadge\    
+|   |   |   ├── flexedTypographyWithBadge.module.css
+|   |   |   └── index.tsx 
+|   |   ├── LinksCard\   
+|   |   |   ├── linksCard.module.css
+|   |   |   └── index.tsx    
+|   |   ├── RoundedNavigationIcon\     
+|   |   |   ├── roundedNavigationIcon.module.css
+|   |   |   └── index.tsx     
+|   |   ├── TeamsInfoCard\    
+|   |   |   ├── teamsInfoCard.module.css
+|   |   |   └── index.tsx    
+|   |   ├── TextWithIcon\     
+|   |   |   ├── textWithIcon.module.css 
+|   |   |   └── index.tsx   
+|   |   └── UserInfoCard\       
+|   |   |   ├── userInfoCard.module.css
+|   |   |   └── index.tsx    
+│   ├── hooks/     
+|   |   └── useFetchFromApi.ts      
+│   ├── lib/          
+│   |   ├── Alert/          
+|   |   |   ├── alert.module.css  
+|   |   |   └── index.tsx     
+│   |   ├── Avatar/          
+|   |   |   ├── avatar.module.css  
+|   |   |   └── index.tsx     
+│   |   ├── Badge/          
+|   |   |   ├── badge.module.css  
+|   |   |   └── index.tsx     
+│   |   ├── Button/          
+|   |   |   ├── button.module.css  
+|   |   |   └── index.tsx     
+│   |   ├── Card/          
+|   |   |   ├── card.module.css  
+|   |   |   └── index.tsx     
+│   |   ├── DatePicker/          
+|   |   |   ├── datePicker.module.css  
+|   |   |   └── index.tsx     
+│   |   ├── DotSeperator/          
+|   |   |   ├── dotSeperator.module.css  
+|   |   |   └── index.tsx     
+│   |   ├── Spinner/          
+|   |   |   ├── spinner.module.css  
+|   |   |   └── index.tsx     
+│   |   ├── Tabs/          
+|   |   |   ├── tab.module.css  
+|   |   |   └── index.tsx     
+│   |   └── Typography/          
+|   |   |   ├── typography.module.css  
+|   |   |   └── index.tsx     
+│   ├── pages/                 
+│   |   ├── BudgetRoom/             
+|   |   |   └── index.tsx    
+|   |   └── DashboardHome/
+|   |   |   ├── dashboardHome.module.css
+|   |   |   ├── homepageCardsInfo.ts
+|   |   |   └── index.tsx
+│   ├── services/              
+│   |   └── vedPal.service.ts 
+│   ├── utils/                 
+│   |   └── config.ts  # all environment variable import happens here. This is so that things like `import.meta.env.VITE_BASE_URL` does not happen anywhere else in code
+│   ├── App.tsx            
+│   ├── index.css            
+│   ├── main.tsx            
+|   └── vite-env.d.ts        
+├── public/                   
+|   └── vite.svg              
+├── .gitignore                
+├── eslint.config.js         
+├── index.html           
+├── package-lock.json
+├── package.json             
+├── tsconfig.app.json     
+├── tsconfig.json            
+├── tsconfig.node.json        
+├── vite.config.ts        
+└── README.md           
 ```
