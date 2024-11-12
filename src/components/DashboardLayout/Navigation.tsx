@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import vendPalLogo from '../../assets/images/vendPal-logo.png';
 import chatIcon from '../../assets/icons/chat.svg';
 import notificationIcon from '../../assets/icons/notification.svg';
+import config from '../../utils/config';
 
 const navIcon = [chatIcon, notificationIcon];
 
@@ -13,7 +14,7 @@ const Navigation = () => {
   const navigate = useNavigate();
   let location = useLocation();
   const handleTabChange = (key: string) => {
-    navigate(`v-pal/${key}`);
+    navigate(`v-pal2/${key}`);
   };
 
   return (
@@ -27,7 +28,10 @@ const Navigation = () => {
             tabs={dashboadLayoutTabList}
             variant="segmented"
             onTabsChange={handleTabChange}
-            defaultSelected={location.pathname.replace('/v-pal/', '')}
+            defaultSelected={location.pathname.replace(
+              `/${config.appBaseUrl}/`,
+              '',
+            )}
           />
         </div>
       </div>
