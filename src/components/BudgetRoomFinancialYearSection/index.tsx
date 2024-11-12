@@ -6,7 +6,7 @@ import nigeriaFlag from '../../assets/icons/nigeria-flag.svg';
 import usaFlag from '../../assets/icons/usa-flag.svg';
 import FlexedTypographyWithBadge from '../FlexedTypographyWithBadge';
 
-const BudgetRoomFinancialYearSection = () => {
+function BudgetRoomFinancialYearSection() {
   return (
     <div className={styles.sectionContainer}>
       <div className={styles.filterContainer}>
@@ -20,16 +20,16 @@ const BudgetRoomFinancialYearSection = () => {
         <div className={styles.sectionCard}>
           <Card
             title="Currency"
-            footer={
+            footer={(
               <Button
                 variant="primary"
-                hasIcon={true}
+                hasIcon
                 iconPosition="left"
                 icon={contractIcon}
               >
                 Edit overview
               </Button>
-            }
+            )}
           >
             <div className={styles.cardContent}>
               <FlexedTypographyWithBadge
@@ -68,7 +68,7 @@ const BudgetRoomFinancialYearSection = () => {
                   />
                 </div>
               </div>
-              <div className={styles.space}></div>
+              <div className={styles.space} />
             </div>
           </Card>
         </div>
@@ -102,6 +102,6 @@ const BudgetRoomFinancialYearSection = () => {
       </div>
     </div>
   );
-};
+}
 
 export default BudgetRoomFinancialYearSection;

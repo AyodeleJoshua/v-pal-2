@@ -28,3 +28,5 @@ export const hompeageCards = [
     isfooterButton: true,
   },
 ];
+
+export default hompeageCards;

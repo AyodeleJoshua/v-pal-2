@@ -1,8 +1,8 @@
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import RoundedNavigationIcon from '../RoundedNavigationIcon';
 import style from './dashboardLayout.module.css';
 import dashboadLayoutTabList from './dashboadLayoutTabList';
 import { Tabs } from '../../lib';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
 import vendPalLogo from '../../assets/images/vendPal-logo.png';
 import chatIcon from '../../assets/icons/chat.svg';
 import notificationIcon from '../../assets/icons/notification.svg';
@@ -10,11 +10,11 @@ import config from '../../utils/config';
 
 const navIcon = [chatIcon, notificationIcon];
 
-const Navigation = () => {
+function Navigation() {
   const navigate = useNavigate();
-  let location = useLocation();
+  const location = useLocation();
   const handleTabChange = (key: string) => {
-    navigate(`v-pal2/${key}`);
+    navigate(`v-pal-2/${key}`);
   };
 
   return (
@@ -42,6 +42,6 @@ const Navigation = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navigation;

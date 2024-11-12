@@ -1,8 +1,8 @@
 import styles from './dashboardHome.module.css';
-import { hompeageCards } from './homepageCardsInfo';
+import hompeageCards from './homepageCardsInfo';
 import DashboardHomeCard from '../../components/DashboardHomeCard';
 
-const DashboardHome = () => {
+function DashboardHome() {
   return (
     <div className={styles.home_container}>
       <div className={styles.card_group}>
@@ -20,6 +20,6 @@ const DashboardHome = () => {
       </div>
     </div>
   );
-};
+}
 
 export default DashboardHome;

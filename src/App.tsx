@@ -13,7 +13,7 @@ function App() {
   const { isLoading } = useFetchFromApi();
 
   return (
-    <>
+    <div>
       {isLoading ? (
         <div>
           <Spinner />
@@ -27,23 +27,23 @@ function App() {
                 <Route path="budget-room" element={<BudgetRoom />} />
                 <Route
                   path="*"
-                  element={<Navigate to="dashboard" replace={true} />}
+                  element={<Navigate to="dashboard" replace />}
                 />
               </Route>
               <Route
                 path="*"
-                element={
+                element={(
                   <Navigate
                     to={`${config.appBaseUrl}/dashboard`}
-                    replace={true}
+                    replace
                   />
-                }
+                )}
               />
             </Routes>
           </Suspense>
         </DashboardLayout>
       )}
-    </>
+    </div>
   );
 }
 

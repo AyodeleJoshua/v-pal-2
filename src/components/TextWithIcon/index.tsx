@@ -7,7 +7,7 @@ interface TextWithIconProps {
   count?: number;
 }
 
-const TextWithIcon = ({ text, icon, count }: TextWithIconProps) => {
+function TextWithIcon({ text, icon, count }: TextWithIconProps) {
   return (
     <div className={styles.container}>
       <div className={styles.typo_with_icon}>
@@ -17,6 +17,6 @@ const TextWithIcon = ({ text, icon, count }: TextWithIconProps) => {
       {count && <Typography.Text>{count}</Typography.Text>}
     </div>
   );
-};
+}
 
 export default TextWithIcon;

@@ -7,13 +7,13 @@ const budgetRoomTabOptions = [
   { key: '3', label: 'Budget room centre' },
   { key: '4', label: 'Budget control' },
 ];
-const BudgetRoom = () => {
+function BudgetRoom() {
   return (
     <>
       <Tabs tabs={budgetRoomTabOptions} variant="basic" />
       <BudgetRoomFinancialYearSection />
     </>
   );
-};
+}
 
 export default BudgetRoom;

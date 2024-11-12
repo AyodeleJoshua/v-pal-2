@@ -11,25 +11,24 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ icon, iconPosition, hasIcon, variant, contentAlign, ...props }, ref) => {
-    return (
-      <button
-        className={`${styles.button} ${
-          variant === 'primary' ? styles.primary_button : styles.ghost_button
-        } ${styles[contentAlign || 'center']}`}
-        ref={ref}
-        {...props}
-      >
-        {hasIcon && iconPosition === 'left' && icon && (
-          <img src={icon} alt="" />
-        )}
-        <span>{props.children}</span>
-        {hasIcon && iconPosition === 'right' && icon && (
-          <img src={icon} alt="" />
-        )}
-      </button>
-    );
-  },
+  ({
+    icon, iconPosition, hasIcon, variant, contentAlign, ...props
+  }, ref) => (
+    <button
+      type="button"
+      className={`${styles.button} ${
+        variant === 'primary' ? styles.primary_button : styles.ghost_button
+      } ${styles[contentAlign || 'center']}`}
+      ref={ref}
+      {...props}
+    >
+      {hasIcon && iconPosition === 'left' && icon && <img src={icon} alt="" />}
+      <span>{props.children}</span>
+      {hasIcon && iconPosition === 'right' && icon && <img src={icon} alt="" />}
+    </button>
+  ),
 );
+
+Button.displayName = 'Button';
 
 export default Button;

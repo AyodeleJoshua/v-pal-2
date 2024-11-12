@@ -12,7 +12,7 @@ interface FlexedTypographyWithBadge {
   showHead?: boolean;
 }
 
-const FlexedTypographyWithBadge = ({
+function FlexedTypographyWithBadge({
   text,
   showBadge = true,
   flagSrc,
@@ -20,7 +20,7 @@ const FlexedTypographyWithBadge = ({
   fieldText,
   showHead = true,
   showAssociatedField,
-}: FlexedTypographyWithBadge) => {
+}: FlexedTypographyWithBadge) {
   return (
     <div>
       {showHead && (
@@ -46,6 +46,6 @@ const FlexedTypographyWithBadge = ({
       )}
     </div>
   );
-};
+}
 
 export default FlexedTypographyWithBadge;

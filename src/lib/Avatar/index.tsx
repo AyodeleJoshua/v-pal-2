@@ -5,7 +5,7 @@ interface AvatarProps {
   size?: number;
   alt?: string;
 }
-const Avatar = ({ imageSource, size = 64, alt = 'avatar' }: AvatarProps) => {
+function Avatar({ imageSource, size = 64, alt = 'avatar' }: AvatarProps) {
   return (
     <img
       className={styles.avatar_image}
@@ -15,6 +15,6 @@ const Avatar = ({ imageSource, size = 64, alt = 'avatar' }: AvatarProps) => {
       height={size}
     />
   );
-};
+}
 
 export default Avatar;

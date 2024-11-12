@@ -4,12 +4,12 @@ interface RoundedNavigationProps {
   iconSvg: string;
 }
 
-const RoundedNavigationIcon = ({ iconSvg }: RoundedNavigationProps) => {
+function RoundedNavigationIcon({ iconSvg }: RoundedNavigationProps) {
   return (
     <div className={styles.iconContainer}>
       <img src={iconSvg} alt="" />
     </div>
   );
-};
+}
 
 export default RoundedNavigationIcon;

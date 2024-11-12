@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Calendar } from 'react-date-range';
+import { format as formatDate } from 'date-fns';
 import styles from './datePicker.module.css';
 import calendarIcon from '../../assets/icons/calendar.svg';
-import { format as formatDate } from 'date-fns';
 
 interface DatePickerProps {
   label: string;
@@ -11,12 +11,12 @@ interface DatePickerProps {
   format?: string;
 }
 
-const DatePicker = ({
+function DatePicker({
   label,
   format = 'd LLLL, yy',
   onDateChange,
   defaultSelected,
-}: DatePickerProps) => {
+}: DatePickerProps) {
   const [selectedDate, setSelectedDate] = useState(
     defaultSelected || 'Select Date',
   );
@@ -26,6 +26,7 @@ const DatePicker = ({
     <div className={styles.datepicker}>
       <div>{label}</div>
       <button
+        type="button"
         className={styles.button}
         onClick={() => setShowCalendar(!showCalendar)}
       >
@@ -38,13 +39,15 @@ const DatePicker = ({
           onChange={(date) => {
             const formattedDate = formatDate(date, format);
             setSelectedDate(formattedDate);
-            onDateChange && onDateChange(formattedDate);
+            if (onDateChange) {
+              onDateChange(formattedDate);
+            }
             setShowCalendar(false);
           }}
         />
       )}
     </div>
   );
-};
+}
 
 export default DatePicker;

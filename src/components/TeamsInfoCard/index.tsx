@@ -6,7 +6,7 @@ import upgradeIcon from '../../assets/icons/upgrade.svg';
 import styles from './teamsInfoCard.module.css';
 import FlexedTypographyWithBadge from '../FlexedTypographyWithBadge';
 
-const TeamsInfoCard = () => {
+function TeamsInfoCard() {
   return (
     <Card bordered>
       <div className={styles.card_content}>
@@ -30,6 +30,6 @@ const TeamsInfoCard = () => {
       </div>
     </Card>
   );
-};
+}
 
 export default TeamsInfoCard;

@@ -1,4 +1,6 @@
-import { Avatar, Button, Card, DotSeperator } from '../../lib';
+import {
+  Avatar, Button, Card, DotSeperator,
+} from '../../lib';
 import Typography from '../../lib/Typography';
 import styles from './dashboardHomeCard.module.css';
 import contractEditIcon from '../../assets/icons/contract_edit.svg';
@@ -13,14 +15,14 @@ interface DashboardHomeProps {
   isfooterButton: boolean;
 }
 
-const DashboardHomeCard = ({
+function DashboardHomeCard({
   contentInfo,
   team,
   avatar,
   bgColor,
   contentBg,
   isfooterButton,
-}: DashboardHomeProps) => {
+}: DashboardHomeProps) {
   return (
     <div className={styles.card}>
       <Card bordered={false} backgroundColor={bgColor} padding="reduced">
@@ -31,9 +33,7 @@ const DashboardHomeCard = ({
             }`}
             style={{ backgroundColor: contentBg }}
           >
-            {contentInfo ? (
-              contentInfo
-            ) : (
+            {contentInfo || (
               <div className={styles.outer_container}>
                 <div className={styles.add_icon_container}>
                   <img src={addIcon} alt="" />
@@ -45,7 +45,7 @@ const DashboardHomeCard = ({
             {isfooterButton ? (
               <Button
                 variant="ghost"
-                hasIcon={true}
+                hasIcon
                 icon={contractEditIcon}
                 iconPosition="left"
               >
@@ -71,6 +71,6 @@ const DashboardHomeCard = ({
       </Card>
     </div>
   );
-};
+}
 
 export default DashboardHomeCard;

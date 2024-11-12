@@ -7,7 +7,7 @@ import globeIcon from '../../assets/icons/globe.svg';
 import filterIcon from '../../assets/icons/filter.svg';
 import avatar from '../../assets/images/avatar.png';
 
-const UserInfoCard = () => {
+function UserInfoCard() {
   return (
     <Card bordered>
       <div className={styles.card_content}>
@@ -25,6 +25,6 @@ const UserInfoCard = () => {
       </div>
     </Card>
   );
-};
+}
 
 export default UserInfoCard;

@@ -10,18 +10,18 @@ interface CardProps {
   padding?: 'full' | 'reduced';
 }
 
-const Card = ({
+function Card({
   bordered = true,
   backgroundColor = 'transparent',
   children,
   footer,
   title,
   padding = 'full',
-}: CardProps) => {
+}: CardProps) {
   return (
     <div
       className={`${styles.card} ${bordered && styles.card_border}`}
-      style={{ backgroundColor: backgroundColor }}
+      style={{ backgroundColor }}
     >
       {title && (
         <div className={`${styles.card_item} ${styles.card_title}`}>
@@ -36,6 +36,6 @@ const Card = ({
       )}
     </div>
   );
-};
+}
 
 export default Card;

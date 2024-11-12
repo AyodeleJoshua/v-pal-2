@@ -3,7 +3,7 @@ import Typography from '../../lib/Typography';
 import styles from './linkscard.module.css';
 import visitWebIcon from '../../assets/icons/visit-globe.svg';
 
-const LinksCard = () => {
+function LinksCard() {
   return (
     <Card bordered>
       <div className={styles.card_content}>
@@ -24,6 +24,6 @@ const LinksCard = () => {
       </div>
     </Card>
   );
-};
+}
 
 export default LinksCard;

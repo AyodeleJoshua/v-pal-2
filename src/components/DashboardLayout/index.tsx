@@ -10,7 +10,7 @@ interface DashboardLayoutProps {
   children: ReactNode;
 }
 
-const DashboardLayout = ({ children }: DashboardLayoutProps) => {
+function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <>
       <Navigation />
@@ -27,6 +27,6 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
       </main>
     </>
   );
-};
+}
 
 export default DashboardLayout;

@@ -6,12 +6,12 @@ interface AlertProps {
   type?: 'error' | 'info' | 'warning';
 }
 
-const Alert = ({ children, type = 'error' }: AlertProps) => {
+function Alert({ children, type = 'error' }: AlertProps) {
   return (
     <div role="alert" className={`${styles.alert} ${styles[type]}`}>
       {children}
     </div>
   );
-};
+}
 
 export default Alert;
