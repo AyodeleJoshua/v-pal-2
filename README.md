@@ -9,7 +9,7 @@ This is a simple web app that displays dashboard based on specified design
 
 # Developers Experience Features
 
-- Eslint to manage code quality and consistence
+- Eslint to improve code quality and consistence
 - Typescript to provide type safety
 
 # Getting Started
